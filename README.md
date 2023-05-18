@@ -22,3 +22,15 @@ To get started, just clone the repository and run `npm install && npm run dev`:
     git clone https://github.com/karvalier/poke-memor.git
     npm install
     npm run dev
+
+## Folder Structured 
+```shell
+
+├── README.md                       # README file
+├── components                      # Folder holds reusable React components used throughout the application.
+├── pages                           # Next JS Pages
+├── public                          # Public assets folder
+├── styles                          # Styles folder CSS
+├── tailwind.config.js              # Tailwind CSS configuration
+
+```
