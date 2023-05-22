@@ -1,4 +1,4 @@
-const nextConfig = {
+module.exports = {
     images: {
         loader: 'akamai',
         path: '',
@@ -17,4 +17,3 @@ const nextConfig = {
     },
   };
 
-module.exports = nextConfig;
