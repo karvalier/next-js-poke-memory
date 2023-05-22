@@ -2,7 +2,7 @@
 
 ## Demo: 
 
-https://karvalier.github.io/next-js-poke-memory/memory
+https://karvalier.github.io/next-js-poke-memory
 
 ## Introduction:
 Welcome to the Pokémon Memory Game! This project is a fun memory game based on the popular Pokémon characters. Test your ability to remember and match Pokémon cards in this challenging game.
