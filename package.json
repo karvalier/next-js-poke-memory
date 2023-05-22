@@ -1,13 +1,16 @@
 {
-  "name": "poke-memory",
+  "name": "next-js-poke-memory",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "private": false,
+  "homepage": "http://karvalier.github.io/next-js-poke-memory",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
   "author": "sk.karem@gmail.com",
   "license": "ISC",
