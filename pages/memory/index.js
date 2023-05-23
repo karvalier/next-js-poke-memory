@@ -111,19 +111,21 @@ export default function Home() {
           <h3>Puntaje: { data.filter(item => !item.active).length /2 }</h3>
           <div className='max-w-6xl grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6 border-2 rounded-lg shadow-xl border-gray-600 rounded-lg p-4' >
             {data.filter(item => item.active).length > 0 ? data.map((item, key) => (
-              <Card clearCard={!item.active} value={item.name} img={item.img} active={select.find(item => item?.includes(key))} onClick={(value) => onPar(`${value}-${key}`)}/>
-            )) : <div>
-               {/* Winner message */}
-        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
-          <strong className="font-bold">¡Felicitaciones!</strong>
-          <span className="block sm:inline"> Has ganado el nivel {level}.</span>
-        </div>
+              <Card clearCard={!item.active} value={item.name} img={item.img} active={select.find(item => Number(item.split('-')[1]) === key)} onClick={(value) => onPar(`${value}-${key}`)}/>
+            )) : 
+            data.length > 0 ? 
+            <div>
+              {/* Winner message */}
+              <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
+                <strong className="font-bold">¡Felicitaciones!</strong>
+                <span className="block sm:inline"> Has ganado el nivel {level}.</span>
+              </div>
 
-      {/* Start game button */}
-          <button onClick={() => setLevel(level + 1)} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            Jugar nivel {level + 1}
-          </button>
-              </div>}
+              {/* Start game button */}
+              <button onClick={() => setLevel(level + 1)} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Jugar nivel {level + 1}
+              </button>
+            </div> : <div/>}
          </div>  
         </div>
       </Layout>
